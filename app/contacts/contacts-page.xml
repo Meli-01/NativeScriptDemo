@@ -1,0 +1,27 @@
+<Page
+        navigatingTo="onNavigatingTo"
+        xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"/>
+        <ActionItem icon="res://menu"
+                    android:visibility="collapsed"
+                    tap="onDrawerButtonTap"
+                    ios.position="left">
+        </ActionItem>
+        <Label text="Contacts" class="action-bar-title"/>
+    </ActionBar>
+
+    <StackLayout>
+        <ListView items="{{ contactList }}" class="list-group" id="listView"
+                  loaded="{{ onListViewLoaded }}" row="2" height="300" rowHeight="30">
+            <ListView.itemTemplate>
+                <ScrollView class="list-group-item">
+                    <Label text="{{ name || 'no contacts loaded' }}" class="title"/>
+                </ScrollView>
+            </ListView.itemTemplate>
+        </ListView>
+        <Button text="Load Contacts" class="-outline" tap="loadContacts"/>
+        <Label text="{{ errorMessage }}"/>
+    </StackLayout>
+</Page>

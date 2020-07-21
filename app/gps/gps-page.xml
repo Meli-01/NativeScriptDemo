@@ -1,0 +1,19 @@
+<Page
+        navigatingTo="onNavigatingTo"
+        xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <ActionItem icon="res://menu"
+                    android:visibility="collapsed"
+                    tap="onDrawerButtonTap"
+                    ios.position="left">
+        </ActionItem>
+        <Label text="GPS" class="action-bar-title"/>
+    </ActionBar>
+    <StackLayout>
+        <Label text="{{ 'Latitude: ' + lat }}" class="custom-text"/>
+        <Label text="{{ 'Longitude: ' + lon }}" class="custom-text"/>
+        <Button text="Load GPS Data" tap="{{ buttonGetLocationTap }}" class="-outline"/>
+        <Label text="{{ errorMessage }}"/>
+    </StackLayout>
+</Page>

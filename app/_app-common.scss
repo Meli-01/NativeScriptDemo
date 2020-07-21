@@ -1,0 +1,17 @@
+@import "~@nativescript/theme/core";
+@import "~@nativescript/theme/lime";
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+  font-weight: 900;
+}
+
+.custom-text {
+  font-size: 15px;
+  margin: 20px 27px;
+}
+
+.action-bar-title {
+  color: white;
+  font-size: 20px;
+}

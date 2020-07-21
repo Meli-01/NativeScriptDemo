@@ -1,0 +1,21 @@
+<Page
+        navigatingTo="onNavigatingTo"
+        xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"/>
+        <ActionItem icon="res://menu"
+                    android:visibility="collapsed"
+                    tap="onDrawerButtonTap"
+                    ios.position="left">
+        </ActionItem>
+        <Label text="NativeScript Demo" class="action-bar-title"/>
+    </ActionBar>
+
+    <StackLayout>
+        <Button text="GPS" tap="onButtonTap" route="gps/gps-page" class="-outline"/>
+        <Button text="Camera and Gallery" tap="onButtonTap" route="camera/camera-page" class="-outline"/>
+        <Button text="Contacts" tap="onButtonTap" route="contacts/contacts-page" class="-outline"/>
+        <Button text="Remote API Request" tap="onButtonTap" route="api/api-page" class="-outline"/>
+    </StackLayout>
+</Page>

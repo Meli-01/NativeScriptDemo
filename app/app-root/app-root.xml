@@ -1,0 +1,52 @@
+<nsDrawer:RadSideDrawer xmlns:nsDrawer="nativescript-ui-sidedrawer" id="sideDrawer" loaded="onLoaded"
+                        class="ns-statusbar-transparent">
+    <nsDrawer:RadSideDrawer.drawerTransition>
+        <nsDrawer:SlideInOnTopTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
+
+    <nsDrawer:RadSideDrawer.drawerContent>
+        <GridLayout rows="auto, *" class="nt-drawer__content">
+            <StackLayout>
+                <Label/>
+                <GridLayout columns="auto, *"
+                            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Home' ? ' -selected': '') }}"
+                            route="home/home-page" title="Home" tap="onNavigationItemTap">
+                    <Label row="0" col="0" text="&#xf015;" class="nt-icon fas"/>
+                    <Label row="0" col="1" text="Home" class="p-r-10"/>
+                </GridLayout>
+
+                <GridLayout columns="auto, *"
+                            class="{{ 'nt-drawer__list-item' + (selectedPage === 'GPS' ? ' -selected': '') }}"
+                            route="gps/gps-page" title="GPS" tap="onNavigationItemTap">
+                    <Label row="0" col="0" text="&#xf124;" class="nt-icon fas"/>
+                    <Label row="0" col="1" text="GPS" class="p-r-10"/>
+                </GridLayout>
+
+                <GridLayout columns="auto, *"
+                            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Camera' ? ' -selected': '') }}"
+                            route="camera/camera-page" title="Camera" tap="onNavigationItemTap">
+                    <Label row="0" col="0" text="&#xf030;" class="nt-icon fas"/>
+                    <Label row="0" col="1" text="Camera" class="p-r-10"/>
+                </GridLayout>
+
+                <GridLayout columns="auto, *"
+                            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Contacts' ? ' -selected': '') }}"
+                            route="contacts/contacts-page" title="Contacts" tap="onNavigationItemTap">
+                    <Label row="0" col="0" text="&#xf2b9;" class="nt-icon fas"/>
+                    <Label row="0" col="1" text="Contacts" class="p-r-10"/>
+                </GridLayout>
+
+                <GridLayout columns="auto, *"
+                            class="{{ 'nt-drawer__list-item' + (selectedPage === 'API' ? ' -selected': '') }}"
+                            route="api/api-page" title="API" tap="onNavigationItemTap">
+                    <Label row="0" col="0" text="&#xf381;" class="nt-icon fas"/>
+                    <Label row="0" col="1" text="API Request" class="p-r-10"/>
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+    </nsDrawer:RadSideDrawer.drawerContent>
+
+    <nsDrawer:RadSideDrawer.mainContent>
+        <Frame defaultPage="home/home-page"></Frame>
+    </nsDrawer:RadSideDrawer.mainContent>
+</nsDrawer:RadSideDrawer>

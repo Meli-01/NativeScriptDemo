@@ -1,0 +1,22 @@
+<Page
+        navigatingTo="onNavigatingTo"
+        xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"/>
+        <ActionItem icon="res://menu"
+                    android:visibility="collapsed"
+                    tap="onDrawerButtonTap"
+                    ios.position="left">
+        </ActionItem>
+        <Label text="API Request" class="action-bar-title"/>
+    </ActionBar>
+    <StackLayout>
+        <Button text="Load Data" class="-outline" tap="loadData"/>
+        <Label text="Weather for Bern" class="custom-text"/>
+        <Label text="{{ description }}" class="custom-text"/>
+        <Label text="{{ temp }}" class="custom-text"/>
+        <Label text="{{ humidity }}" class="custom-text"/>
+        <Label text="{{ windSpeed }}" class="custom-text"/>
+    </StackLayout>
+</Page>

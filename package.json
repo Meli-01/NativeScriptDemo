@@ -1,0 +1,34 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.NativeScript",
+    "tns-ios": {
+      "version": "6.5.0"
+    },
+    "tns-android": {
+      "version": "6.5.0"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "lint": "eslint \"app/**/*.js\""
+  },
+  "dependencies": {
+    "@nativescript/theme": "~2.3.0",
+    "nativescript-camera": "^4.5.0",
+    "nativescript-contacts-lite": "^0.2.7",
+    "nativescript-geolocation": "^5.1.0",
+    "nativescript-imagepicker": "^7.1.0",
+    "nativescript-ui-sidedrawer": "~8.0.0",
+    "rxjs": "^6.4.0",
+    "tns-core-modules": "~6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "~5.8.0",
+    "nativescript-dev-webpack": "~1.5.0",
+    "node-sass": "^4.7.1"
+  },
+  "gitHead": "20a65d338ae8f8911087ab6615b89363f864b07b",
+  "readme": "NativeScript Application"
+}
